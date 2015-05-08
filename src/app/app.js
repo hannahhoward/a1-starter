@@ -9,7 +9,7 @@ import {Component, View, AsModule, RouteConfig, bootstrap} from "a1atscript";
   selector: "app"
 })
 @View({
-  template: "<p>Awesome</p>"
+  template: "<p>Awesome {{app.awesome}}</p>"
 })
 class App {
   constructor() {
