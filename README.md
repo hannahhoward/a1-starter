@@ -1,20 +1,19 @@
-a1-starter
-============
+# a1-starter
 
-Starter production Gulp + Browserify + Babel.js + A1AtScrpit project with examples of how to accomplish some common tasks and workflows.
+Starter Angular Project setup to use ES6 and A1AtScript.
+
 Includes the following tools, tasks, and workflows:
 
 - [Browserify](http://browserify.org/) (with [browserify-shim](https://github.com/thlorenz/browserify-shim))
 - [Watchify](https://github.com/substack/watchify) (caching version of browserify for super fast rebuilds)
 - [SASS](http://sass-lang.com/) (super fast libsass with [source maps](https://github.com/sindresorhus/gulp-ruby-sass#sourcemap), and [autoprefixer](https://github.com/sindresorhus/gulp-autoprefixer))
-- [Babel.js](https://babeljs.io/) (with source maps!)
+- [Babel.js](https://babeljs.io/) (for ES6 transpilation with source maps!)
 - [A1Strcipt](https://github.com/hannahhoward/a1atscript)
 - [BrowserSync](http://browsersync.io) for live reloading and a static server
 - [Image optimization](https://www.npmjs.com/package/gulp-imagemin)
 - Error handling in the console [and in Notification Center](https://github.com/mikaelbr/gulp-notify)
 
-Start To Finish Setup
-=====================
+# Start To Finish Setup
 
 If you've never used Node or npm before, you'll need to install Node.
 If you use homebrew, do:
@@ -39,16 +38,11 @@ To run the version of gulp installed local to the project, in the root of your t
 ./node_modules/.bin/gulp
 ```
 
-Alias `./node_modules/.bin/gulp` to `gulp`. Open up `~/.zshrc` or `~./bashrc` and add the following line:
+(if you installed gulp globally you can just type 'gulp')
 
-```
-alias gulp='node_modules/.bin/gulp'
-```
+### Start Coding
 
-After that, just run the `default` gulp task with:
-```
-gulp
-```
+Your JS files reside in src/app -- you'll want to start in the main file app.js. For a more fully fleshed out example, checkout the branch 'example' on the repo.
 
 #### Production files
 
@@ -59,7 +53,7 @@ gulp production
 This will run JavaScript tests, then re-build optimized, compressed css and js files to the build folder, as well as output their file sizes to the console. It's a shortcut for running the following tasks: `karma`, `images`, `iconFont` `minifyCss`, `uglifyJs`.
 
 #### JavaScript Tests with Karma
-This repo includes a basic js testing setup with the following: [Karma](http://karma-runner.github.io/0.12/index.html), and [Jasmine](http://jasmine.github.io/). There is `karma` gulp task, which the `production` task uses to run the tests before compiling. If any tests fail, the `production` task will abort.
+This repo includes a basic js testing setup with [Karma](http://karma-runner.github.io/0.12/index.html) and [Jasmine](http://jasmine.github.io/). There is `karma` gulp task, which the `production` task uses to run the tests before compiling. If any tests fail, the `production` task will abort.
 
 To run the tests and start monitoring files:
 ```
@@ -71,6 +65,6 @@ Want to just run `karma start`? Either add `alias karma="./node_modules/karma/bi
 
 --
 
-Social icons courtesy of [icomoon.io](https://icomoon.io/#icons-icomoon)</small>
+Forked from [Gulp-Starter](https://github.com/greypants/gulp-starter)
 
-Made with ♥ at [Viget](http://viget.com)!
+A1AtScript and customizations to Gulp-Starter by Hannah Howard
