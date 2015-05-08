@@ -3,28 +3,18 @@ import "angular";
 import "angular-new-router";
 
 import {Component, View, AsModule, RouteConfig, bootstrap} from "a1atscript";
-import template from "./froyo.html"
-import Froyo from "./Froyo.js"
-import FroyoList from "./froyoList/froyoList.js";
-import FroyoDetail from "./froyoDetail/froyoDetail.js";
 
-@AsModule('froyo', ['ngNewRouter', FroyoList, FroyoDetail, Froyo])
+@AsModule('myApp', ['ngNewRouter'])
 @Component({
-  selector: "froyo"
+  selector: "app"
 })
 @View({
-  template: template
+  template: "<p>Awesome</p>"
 })
-@RouteConfig({
-  path: "/", component: FroyoList
-})
-@RouteConfig({
-  path: "/:id", component: FroyoDetail
-})
-class FroyoApp {
+class App {
   constructor() {
     this.awesome = "Hello!";
   }
 }
 
-bootstrap(FroyoApp);
+bootstrap(App);
