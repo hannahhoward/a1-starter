@@ -2,6 +2,6 @@
 
 <ul>
   <li ng-repeat="froyo in froyoList.froyos">
-    <a ng-link="froyoDetail({id: $index})">{{froyo.flavor}}, {{froyo.cost}}</a>
+    <a ng-link="froyoDetail({id: froyo.id})">{{froyo.flavor}}, {{froyo.cost}}</a>
   </li>
 </ul>
