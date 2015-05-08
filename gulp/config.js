@@ -10,7 +10,7 @@ module.exports = {
   },
   sass: {
     src: src + "/sass/**/*.{sass,scss}",
-    vendorSrc: [],
+    vendorSrc: "./node_modules/angular-material/angular-material.css",
     out: "app.css",
     dest: dest,
     settings: {
