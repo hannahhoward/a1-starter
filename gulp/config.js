@@ -33,6 +33,7 @@ module.exports = {
       entries: src + '/app/app.js',
       dest: dest,
       outputName: 'app.js',
+      paths: ['./src/app/components', './node_modules']
       // Additional file extentions to make optional
       // list of modules to make require-able externally
       // See https://github.com/greypants/gulp-starter/issues/87 for note about

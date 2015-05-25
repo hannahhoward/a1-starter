@@ -8,8 +8,12 @@ import template from "./froyoList.html";
 @View({
   template: template
 })
-export default class FroyoDetail {
+export default class FroyoList {
   constructor(Froyo) {
-    this.froyos = Froyo.all();
+    this.Froyo = Froyo;
+  }
+
+  activate() {
+    return this.Froyo.all().then((froyos) => this.froyos = froyos);
   }
 }

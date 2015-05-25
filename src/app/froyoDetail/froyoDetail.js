@@ -10,6 +10,11 @@ import template from "./froyoDetail.html";
 })
 export default class FroyoDetail {
   constructor(Froyo, $routeParams) {
-    this.froyo = Froyo.find($routeParams.id)
+    this.Froyo = Froyo;
+    this.$routeParams = $routeParams;
+  }
+
+  activate() {
+    return this.Froyo.find(this.$routeParams.id).then((froyo) => this.froyo = froyo);
   }
 }
